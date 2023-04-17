@@ -25,7 +25,7 @@ $result = $mysql->table('form_answers')
 //Mostrar en front el usuario actualizado y removido de "No encontrado"
 //Write notification
 
-flashSession($isGraduated === 1 ? 'El usuario ha sido migrado exitosamente' : 'El usuario aún no se encuentra migrado en el SIGA');
+flashSession($isGraduated === 1 ? 'El usuario ha sido migrado exitosamente' : 'El usuario aún no se encuentra migrado en el SIGA', $isGraduated ===1 ? false : true );
 
 header("Location: " . $_SERVER['HTTP_REFERER']);
 die();
